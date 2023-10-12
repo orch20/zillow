@@ -10,7 +10,7 @@ module.exports = {
         es6: true,
     },
     rules: {
-        indent: ["error", 2],
+        indent: ["error", 4],
         quotes: ["warn", "single"],
         semi: ["warn", "never"],
         "no-unused-vars": [

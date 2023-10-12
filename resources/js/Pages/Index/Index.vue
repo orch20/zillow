@@ -8,7 +8,7 @@
 import { Link } from '@inertiajs/inertia-vue3'
 
 defineProps({
-  message: String,
+    message: String,
 })
 </script>
 

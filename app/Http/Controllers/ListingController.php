@@ -27,7 +27,7 @@ class ListingController extends Controller
      */
     public function create()
     {
-        //
+        return inertia('Listing/Create');
     }
 
     /**
@@ -38,7 +38,9 @@ class ListingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Listing::create($request->all());
+
+        return redirect()->route('listing.index')->with('success', 'Listing created successfully.');
     }
 
     /**
@@ -56,7 +58,7 @@ class ListingController extends Controller
     public function show(Listing $listing)
     {
         return inertia('Listing/Show', [
-            'listing' => Listing::find($listing),
+            'listing' => Listing::find($listing->id),
         ]);
     }
 
