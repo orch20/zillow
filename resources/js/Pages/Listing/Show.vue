@@ -1,13 +1,13 @@
 <template>
-    <div>
+  <div>
     <ListingAdress :listing="listing" />
-    </div>
+  </div>
 </template>
 
 <script setup>
 import ListingAdress from '@/Components/ListingAdress.vue'
-    defineProps({
-        listing: Object,
-    })
+defineProps({
+    listing: Object,
+})
 </script>
 
