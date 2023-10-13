@@ -1,16 +1,16 @@
 <template>
-    <span>{{ formatedPrice }}</span>    
+  <span>{{ formatedPrice }}</span>    
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed } from 'vue'
 
 const props = defineProps({
     price:[Number, String],
 })
 
 const formatedPrice = computed(() => {
-    console.log('price', props, 'formatedPrice');
+    console.log('price', props, 'formatedPrice')
     return Number(props.price).toLocaleString('en-US', {
         style: 'currency',
         currency: 'USD',   
